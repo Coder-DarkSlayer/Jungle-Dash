@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 91454220}
   - component: {fileID: 91454222}
   - component: {fileID: 91454221}
+  - component: {fileID: 91454223}
   m_Layer: 0
   m_Name: Movements
   m_TagString: Untagged
@@ -166,7 +167,7 @@ Animator:
   m_GameObject: {fileID: 91454219}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 206531b978c8d914790e4d24320bb9a6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -229,6 +230,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &91454223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91454219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ded8f61eb07c14aba93ac38ec69955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 927597037}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 927597036}
+  - component: {fileID: 927597037}
   m_Layer: 0
   m_Name: Peter
   m_TagString: Untagged
@@ -480,6 +495,26 @@ Transform:
   - {fileID: 91454220}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927597037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927597035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ada6d24a0d4acf4089f401e783d4f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWalking: 1
+  normalHit: 0
+  frontHit: 0
+  backHit: 0
+  throwItem: 0
+  upHit: 0
+  downHit: 0
+  isAlive: 1
 --- !u!1 &2056184925
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 1.5
+  player: {fileID: 927597037}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
