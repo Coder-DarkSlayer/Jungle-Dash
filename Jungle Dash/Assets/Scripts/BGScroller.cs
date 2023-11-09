@@ -3,7 +3,7 @@ using UnityEngine;
 public class BGScroller : MonoBehaviour
 { 
     [Range(-3f,3f)]
-    [SerializeField] private float scrollSpeed = 2f;
+    [SerializeField] private float scrollSpeed = 1.5f;
     private float offset;
     private Material mat;
     void Start()
