@@ -30,4 +30,7 @@ public class BGScroller : MonoBehaviour
             scrollSpeed = 1.5f;
         }
     }
+    public float speed(){
+        return scrollSpeed;
+    }
 }

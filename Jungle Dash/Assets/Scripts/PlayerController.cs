@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private bool isWalking = false, normalHit = false , frontHit = false , backHit = false , throwItem = false , upHit = false , downHit = false , isAlive = true;
     [SerializeField] private int health = 3;
+    [SerializeField] private GameScreenManager gameScreenManager;
     private int currentHearts = 3;
     private int previousHearts = 3;
     private bool hitTaken = false;
@@ -57,8 +58,10 @@ public class PlayerController : MonoBehaviour
         else{
             throwItem = false;
         }
-        if(health == 0){
+        if(health == 0 && isAlive == true){
+            gameScreenManager.gameOver();
             isAlive = false;
+
         }
         currentHearts = health;
         foreach (Image img in hearts)
