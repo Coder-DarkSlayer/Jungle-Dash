@@ -80,6 +80,9 @@ public class PlayerController : MonoBehaviour
         }
         previousHearts = currentHearts;
     }
+    private void OnTriggerEnter2D(Collider2D collider) {
+        Debug.Log("YES!");
+    }
     public bool Damage(){
         return hitTaken;
     }

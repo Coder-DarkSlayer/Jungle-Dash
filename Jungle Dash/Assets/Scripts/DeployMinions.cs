@@ -7,7 +7,6 @@ public class DeployMinions : MonoBehaviour
     [SerializeField] private GameObject minionPrefab;
     [SerializeField] private float respawnTime = 5f;
     private bool gameStage = true;
-    private List<float> yCoordinatesOfSpawn = new List<float> {-1.35f , -2.9f};
     private Vector2 screenBounds;
     void Start()
     {
@@ -16,7 +15,7 @@ public class DeployMinions : MonoBehaviour
     }
     private void spawnEnemy(){
         GameObject temp = Instantiate(minionPrefab) as GameObject;
-        temp.transform.position = new Vector2(screenBounds.x*2 , yCoordinatesOfSpawn[Random.Range(0,2)]);
+        temp.transform.position = new Vector2(screenBounds.x*2 , -2.45f);
     }
     IEnumerator minionWave(){
         while (gameStage)
