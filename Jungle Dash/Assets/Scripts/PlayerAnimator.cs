@@ -9,7 +9,10 @@ public class PlayerAnimator : MonoBehaviour
     private const string UPHIT = "UpHit";
     private const string DOWNHIT = "DownHit";
     private const string THROWITEM = "ThrowItem";
+    private const string DAMAGE = "DamageTaken";
+    private const string DEAD = "Alive";
     [SerializeField] private PlayerController player;
+
     private Animator animator;
 
     private void Awake() {
@@ -23,5 +26,7 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool(UPHIT, player.upHIT());
         animator.SetBool(DOWNHIT, player.DownHIT());
         animator.SetBool(THROWITEM, player.ThrowITEM());
+        animator.SetBool(DEAD,player.IsAlive());
+        animator.SetBool(DAMAGE , player.Damage());
     }
 }

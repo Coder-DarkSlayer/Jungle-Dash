@@ -23,6 +23,9 @@ public class BGScroller : MonoBehaviour
         else if(player.ThrowITEM()){
             scrollSpeed = 0.5f;
         }
+        else if(!player.IsAlive()){
+            scrollSpeed = 0f;
+        }
         else{
             scrollSpeed = 1.5f;
         }
